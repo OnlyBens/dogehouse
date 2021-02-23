@@ -3,11 +3,13 @@ import { wsend } from "../../createWebsocket";
 import { useVoiceStore } from "@dogehouse/feta/webrtc/stores/useVoiceStore";
 import { useWsHandlerStore } from "@dogehouse/feta/webrtc/stores/useWsHandlerStore";
 
-export async function createTransport(
+type Direction = "recv" | "send";
+
+export const createTransport = async (
   _roomId: string,
-  direction: "recv" | "send",
+  direction: Direction,
   transportOptions: TransportOptions
-) {
+) => {
   console.log(`create ${direction} transport`);
   const { device, set } = useVoiceStore.getState();
 
@@ -122,4 +124,4 @@ export async function createTransport(
   } else {
     set({ sendTransport: transport });
   }
-}
+};

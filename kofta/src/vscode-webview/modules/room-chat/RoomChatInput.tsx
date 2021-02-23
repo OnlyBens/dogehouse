@@ -1,10 +1,10 @@
-import { useAtom } from "jotai";
-import React, { useState, createRef } from "react";
 import { wsend } from "@dogehouse/feta/createWebsocket";
+import { createChatMessage } from "@dogehouse/feta/utils/createChatMessage";
+import { useAtom } from "jotai";
+import React, { createRef, useState } from "react";
 import { meAtom } from "../../atoms";
 import { modalAlert } from "../../components/AlertModal";
 import { useRoomChatStore } from "./useRoomChatStore";
-import { createChatMessage } from "@dogehouse/feta/utils/createChatMessage";
 import { Smile } from "react-feather";
 import "emoji-mart/css/emoji-mart.css";
 import { Picker } from "emoji-mart";
@@ -104,14 +104,60 @@ export const RoomChatInput: React.FC<ChatInputProps> = ({}) => {
       }}
       className={`bg-simple-gray-26 pb-8 px-8 pt-1`}
     >
-      <input
-        maxLength={512}
-        placeholder="Send a message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        className={`text-tmpC1 bg-tmpBg4 px-4 py-3 rounded text-lg focus:outline-none`}
-        onKeyDown={navigateThroughQueriedUsers}
-      />
+      {isEmoji ? (
+        <Picker
+          set="apple"
+          onSelect={(emoji) => {
+            addEmoji(emoji);
+          }}
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "200px",
+            overflowY: "hidden",
+          }}
+          sheetSize={32}
+          theme="dark"
+          emojiTooltip={false}
+          showPreview={false}
+          showSkinTones={false}
+          i18n={{
+            search: "Search",
+            categories: {
+              search: "Search Results",
+              recent: "Frequently Used",
+            },
+          }}
+        />
+      ) : null}
+      <div>
+        <div
+          style={{
+            color: "rgb(167, 167, 167)",
+          }}
+          className={`absolute mt-3 right-12 cursor-pointer`}
+          onClick={() => {
+            setisEmoji(!isEmoji);
+            position = 0;
+          }}
+        >
+          <Smile style={{ inlineSize: "23px" }}></Smile>
+        </div>
+        <input
+          maxLength={512}
+          placeholder="Send a message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          ref={inputRef}
+          className={`text-simple-gray-9c bg-simple-gray-59 px-4 py-3 rounded text-lg focus:outline-none pr-12`}
+          onKeyDown={navigateThroughQueriedUsers}
+          onFocus={() => {
+            setisEmoji(false);
+            position = 0;
+          }}
+          id="room-chat-input"
+        />
+      </div>
     </form>
   );
 };

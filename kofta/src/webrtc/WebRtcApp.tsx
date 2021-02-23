@@ -2,7 +2,7 @@ import { useAtom } from "jotai";
 import React, { useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { setCurrentRoomAtom } from "../vscode-webview/atoms";
-import { useMicIdStore } from "../vscode-webview/shared-stores";
+import { useMicIdStore } from "@dogehouse/feta/shared-stores";
 import { ActiveSpeakerListener } from "./components/ActiveSpeakerListener";
 import { AudioRender } from "./components/AudioRender";
 import { useMuteStore } from "@dogehouse/feta/webrtc/stores/useMuteStore";

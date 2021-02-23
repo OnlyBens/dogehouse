@@ -16,17 +16,5 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": [
-    "../feta/shared-stores.ts",
-    "./vscode-webview/webrtc/utils/mergeRoomPermission.ts",
-    "../feta/webrtc/types.ts",
-    "/feta/webrtc/utils/mergeRoomPermission.ts",
-    "src",
-    "../feta/constants.ts",
-    "../feta/createWebsocket.ts",
-    "../feta/utils/useTokenStore.ts",
-    "../feta/types.ts",
-    "../feta/webrtc/utils",
-    "../feta/webrtc/stores"
-  ]
+  "include": ["src"]
 }

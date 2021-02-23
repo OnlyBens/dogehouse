@@ -54,15 +54,9 @@ export const RoomCard: React.FC<RoomProps> = ({
         <div className={`flex text-white`}>
           <div
             style={{
-              textAlign: "left",
-              fontSize: "calc(var(--vscode-font-size)*1.2)",
-              flex: 1,
-              color: "#D9D9D9",
               display: "-webkit-box",
               WebkitBoxOrient: "vertical",
               WebkitLineClamp: 3,
-              overflow: "hidden",
-              textOverflow: "ellipsis",
             }}
             className={`text-left flex-1 text-xl text-simple-gray-d9 text-ellipsis overflow-hidden break-words`}
           >
