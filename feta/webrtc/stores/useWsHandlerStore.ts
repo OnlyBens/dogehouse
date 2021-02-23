@@ -1,11 +1,13 @@
 import create from "zustand";
 import { combine } from "zustand/middleware";
 
+type HandlerMap = Record<string, (d: any) => void>;
+
 export const useWsHandlerStore = create(
   combine(
     {
-      handlerMap: {} as Record<string, (d: any) => void>,
-      fetchResolveMap: {} as Record<string, (d: any) => void>,
+      handlerMap: {} as HandlerMap,
+      fetchResolveMap: {} as HandlerMap,
     },
     (set) => ({
       addMultipleWsListener: (x: Record<string, (d: any) => void>) => {

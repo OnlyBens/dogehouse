@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { recordKeyCombination } from "react-hotkeys";
-import { useKeyMapStore } from "../../../webrtc/stores/useKeyMapStore";
+import { useKeyMapStore } from "@dogehouse/feta/webrtc/stores/useKeyMapStore";
 import { Button } from "../Button";
 
 interface MuteKeybindProps {

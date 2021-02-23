@@ -2,7 +2,7 @@ import { useAtom } from "jotai";
 import React from "react";
 import { meAtom } from "../atoms";
 import { Codicon } from "../svgs/Codicon";
-import { CurrentRoom, Room } from "../types";
+import { CurrentRoom, Room } from "@dogehouse/feta/types";
 
 interface RoomProps {
   active?: boolean;

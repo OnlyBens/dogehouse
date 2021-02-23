@@ -2,10 +2,12 @@ import { Consumer } from "mediasoup-client/lib/types";
 import create from "zustand";
 import { combine } from "zustand/middleware";
 
+type ConsumerMap = Record<string, { consumer: Consumer; volume: number }>;
+
 export const useConsumerStore = create(
   combine(
     {
-      consumerMap: {} as Record<string, { consumer: Consumer; volume: number }>,
+      consumerMap: {} as ConsumerMap,
     },
     (set) => ({
       setVolume: (userId: string, volume: number) => {

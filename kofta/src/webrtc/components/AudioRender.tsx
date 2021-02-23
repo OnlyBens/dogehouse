@@ -2,7 +2,7 @@ import { useAtom } from "jotai";
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "../../vscode-webview/components/Button";
 import { volumeAtom } from "../../vscode-webview/shared-atoms";
-import { useConsumerStore } from "../stores/useConsumerStore";
+import { useConsumerStore } from "@dogehouse/feta/webrtc/stores/useConsumerStore";
 
 interface AudioRenderProps {}
 
@@ -47,7 +47,11 @@ export const AudioRender: React.FC<AudioRenderProps> = () => {
 
   return (
     <>
-      <div className={`absolute w-full h-full flex z-50 bg-simple-gray-80 ${showAutoPlayModal ? "" : "hidden"}`}>
+      <div
+        className={`absolute w-full h-full flex z-50 bg-simple-gray-80 ${
+          showAutoPlayModal ? "" : "hidden"
+        }`}
+      >
         <div className={`p-8 rounded m-auto bg-simple-gray-3c`}>
           <div className={`text-center mb-4`}>
             Browsers require user interaction before they will play audio. Just

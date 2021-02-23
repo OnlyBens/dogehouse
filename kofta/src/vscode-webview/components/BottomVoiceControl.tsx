@@ -9,8 +9,8 @@ import {
   UserPlus,
 } from "react-feather";
 import { useHistory, useLocation } from "react-router-dom";
-import { wsend } from "../../createWebsocket";
-import { useMuteStore } from "../../webrtc/stores/useMuteStore";
+import { wsend } from "@dogehouse/feta/createWebsocket";
+import { useMuteStore } from "@dogehouse/feta/webrtc/stores/useMuteStore";
 import { currentRoomAtom, myCurrentRoomInfoAtom } from "../atoms";
 import { RoomChat } from "../modules/room-chat/RoomChat";
 import { useRoomChatMentionStore } from "../modules/room-chat/useRoomChatMentionStore";

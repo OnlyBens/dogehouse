@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
-import { wsend } from "../../createWebsocket";
+import { wsend } from "@dogehouse/feta/createWebsocket";
 import { meAtom } from "../atoms";
 import { Backbar } from "../components/Backbar";
 import { BodyWrapper } from "../components/BodyWrapper";

@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import React, { useCallback, useEffect, useState } from "react";
 import { volumeAtom } from "../shared-atoms";
-import { useMicIdStore } from "../shared-stores";
+import { useMicIdStore } from "@dogehouse/feta/shared-stores";
 import { Button } from "./Button";
 import { MuteKeybind, PTTKeybind } from "./keyboard-shortcuts";
 import { VolumeSlider } from "./VolumeSlider";

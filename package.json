@@ -1,0 +1,12 @@
+{
+  "name": "dogehouse",
+  "private": true,
+  "description": "A",
+  "workspaces": {
+    "packages": [
+      "feta",
+      "pilaf",
+      "kofta"
+    ]
+  }
+}

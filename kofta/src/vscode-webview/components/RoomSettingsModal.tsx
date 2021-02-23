@@ -1,12 +1,12 @@
 import { useAtom } from "jotai";
 import React from "react";
 import { X } from "react-feather";
-import { wsend } from "../../createWebsocket";
-import { renameRoomAndMakePrivate } from "../../webrtc/utils/renameRoomAndMakePrivate";
+import { wsend } from "@dogehouse/feta/createWebsocket";
 import { renameRoomAndMakePublic } from "../../webrtc/utils/renameRoomAndMakePublic";
 import { currentRoomAtom } from "../atoms";
 import { Button } from "./Button";
 import { Modal } from "./Modal";
+import { modalPrompt } from "./PromptModal";
 
 interface RoomSettingsModalProps {
   open: boolean;
@@ -64,7 +64,18 @@ export const RoomSettingsModal: React.FC<RoomSettingsModalProps> = ({
           ) : (
             <Button
               onClick={() => {
-                renameRoomAndMakePrivate(currentRoom.name);
+                modalPrompt(
+                  "Set private room name",
+                  (roomName) => {
+                    if (roomName) {
+                      wsend({
+                        op: "make_room_private",
+                        d: { newName: roomName },
+                      });
+                    }
+                  },
+                  currentRoom.name
+                );
                 onRequestClose();
               }}
             >
