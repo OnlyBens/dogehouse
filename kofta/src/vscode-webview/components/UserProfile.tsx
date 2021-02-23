@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { useHistory } from "react-router-dom";
-import { wsend } from "@dogehouse/feta/createWebsocket";
+import { wsend } from "@dogehouse/feta";
 import { currentRoomAtom, meAtom } from "../atoms";
-import { BaseUser } from "@dogehouse/feta/types";
-import { onFollowUpdater } from "@dogehouse/feta/utils/onFollowUpdater";
+import { BaseUser } from "@dogehouse/feta";
+import { onFollowUpdater } from "@dogehouse/feta";
 import { Avatar } from "./Avatar";
 import { Button } from "./Button";
 import { EditProfileModal } from "./EditProfileModal";
-import { linkRegex } from "@dogehouse/feta/constants";
-import { RoomUser } from "@dogehouse/feta/types";
+import { linkRegex } from "@dogehouse/feta";
+import { RoomUser } from "@dogehouse/feta";
 import normalizeUrl from "normalize-url";
 
 interface UserProfileProps {

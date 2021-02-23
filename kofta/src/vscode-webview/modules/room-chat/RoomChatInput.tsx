@@ -1,5 +1,5 @@
-import { wsend } from "@dogehouse/feta/createWebsocket";
-import { createChatMessage } from "@dogehouse/feta/utils/createChatMessage";
+import { wsend } from "@dogehouse/feta";
+import { createChatMessage } from "@dogehouse/feta";
 import { useAtom } from "jotai";
 import React, { createRef, useState } from "react";
 import { meAtom } from "../../atoms";

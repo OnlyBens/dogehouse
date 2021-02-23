@@ -1,7 +1,7 @@
 import { TransportOptions } from "mediasoup-client/lib/types";
 import { wsend } from "../../createWebsocket";
-import { useVoiceStore } from "@dogehouse/feta/webrtc/stores/useVoiceStore";
-import { useWsHandlerStore } from "@dogehouse/feta/webrtc/stores/useWsHandlerStore";
+import { useVoiceStore } from "../stores/useVoiceStore";
+import { useWsHandlerStore } from "../stores/useWsHandlerStore";
 
 type Direction = "recv" | "send";
 

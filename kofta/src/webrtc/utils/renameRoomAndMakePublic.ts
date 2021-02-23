@@ -1,4 +1,4 @@
-import { wsend } from "@dogehouse/feta/createWebsocket";
+import { wsend } from "@dogehouse/feta";
 import { modalPrompt } from "../../vscode-webview/components/PromptModal";
 
 export const renameRoomAndMakePublic = (currentName: string) => {

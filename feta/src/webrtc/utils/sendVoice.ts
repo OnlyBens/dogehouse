@@ -1,7 +1,7 @@
 import { useMicIdStore } from "../../shared-stores";
-import { useMicPermErrorStore } from "@dogehouse/feta/webrtc/stores/useMicPermErrorStore";
-import { useProducerStore } from "@dogehouse/feta/webrtc/stores/useProducerStore";
-import { useVoiceStore } from "@dogehouse/feta/webrtc/stores/useVoiceStore";
+import { useMicPermErrorStore } from "../stores/useMicPermErrorStore";
+import { useProducerStore } from "../stores/useProducerStore";
+import { useVoiceStore } from "../stores/useVoiceStore";
 
 export const sendVoice = async () => {
   const { micId } = useMicIdStore.getState();

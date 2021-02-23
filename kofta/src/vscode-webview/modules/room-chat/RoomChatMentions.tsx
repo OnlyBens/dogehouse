@@ -2,7 +2,7 @@ import { useAtom } from "jotai";
 import React, { useEffect } from "react";
 import { useRoomChatStore } from "./useRoomChatStore";
 import { Avatar } from "../../components/Avatar";
-import { BaseUser } from "@dogehouse/feta/types";
+import { BaseUser } from "@dogehouse/feta";
 import { currentRoomAtom, meAtom } from "../../atoms";
 import { useRoomChatMentionStore } from "./useRoomChatMentionStore";
 

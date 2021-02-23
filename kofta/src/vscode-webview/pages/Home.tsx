@@ -6,14 +6,14 @@ import { RoomCard } from "../components/RoomCard";
 import { Wrapper } from "../components/Wrapper";
 import { BottomVoiceControl } from "../components/BottomVoiceControl";
 import { Button } from "../components/Button";
-import { wsend } from "@dogehouse/feta/createWebsocket";
+import { wsend } from "@dogehouse/feta";
 import { Logo } from "../svgs/Logo";
 import { CreateRoomModal } from "../components/CreateRoomModal";
 import { ProfileButton } from "../components/ProfileButton";
 import { PeopleIcon } from "../svgs/PeopleIcon";
 import { CircleButton } from "../components/CircleButton";
 import { BodyWrapper } from "../components/BodyWrapper";
-import { __prod__ } from "../constants";
+import { __prod__ } from "@dogehouse/feta";
 
 interface HomeProps {}
 
@@ -62,7 +62,7 @@ export const Home: React.FC<HomeProps> = () => {
               />
             </div>
           ) : null}
-          {__prod__ ? null :
+          {__prod__ ? null : (
             <RoomCard
               currentRoomId={undefined}
               onClick={() => alert("it's not a real room")}
@@ -73,15 +73,15 @@ export const Home: React.FC<HomeProps> = () => {
                 numPeopleInside: 1337,
                 creatorId: "-1",
                 peoplePreviewList: [
-                  {id: "-1", displayName: "person 1", numFollowers: 1337},
-                  {id: "-2", displayName: "person 2", numFollowers: 0},
-                ]
+                  { id: "-1", displayName: "person 1", numFollowers: 1337 },
+                  { id: "-2", displayName: "person 2", numFollowers: 0 },
+                ],
               }}
             />
-          }
+          )}
           {rooms.map((r) =>
             r.id === currentRoom?.id ? null : (
-              <div className={(`mt-4`)} key={r.id}>
+              <div className={`mt-4`} key={r.id}>
                 <RoomCard
                   onClick={() => {
                     wsend({ op: "join_room", d: { roomId: r.id } });

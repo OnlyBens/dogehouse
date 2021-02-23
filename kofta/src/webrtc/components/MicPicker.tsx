@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useMicIdStore } from "@dogehouse/feta/shared-stores";
+import { useMicIdStore } from "@dogehouse/feta";
 
 interface MicPickerProps {}
 

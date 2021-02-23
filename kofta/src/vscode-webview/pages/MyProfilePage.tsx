@@ -1,14 +1,14 @@
 import { useAtom } from "jotai";
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { closeWebSocket } from "@dogehouse/feta/createWebsocket";
+import { closeWebSocket } from "@dogehouse/feta";
 import { meAtom } from "../atoms";
 import { Backbar } from "../components/Backbar";
 import { BodyWrapper } from "../components/BodyWrapper";
 import { Button } from "../components/Button";
 import { UserProfile } from "../components/UserProfile";
 import { Wrapper } from "../components/Wrapper";
-import { useTokenStore } from "@dogehouse/feta/utils/useTokenStore";
+import { useTokenStore } from "@dogehouse/feta";
 
 interface MyProfilePageProps {}
 

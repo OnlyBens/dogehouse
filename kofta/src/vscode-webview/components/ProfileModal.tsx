@@ -1,9 +1,9 @@
 import React from "react";
 import ReactModal from "react-modal";
-import { wsend } from "@dogehouse/feta/createWebsocket";
+import { wsend } from "@dogehouse/feta";
 import { useRoomChatStore } from "../modules/room-chat/useRoomChatStore";
 import { Codicon } from "../svgs/Codicon";
-import { CurrentRoom, RoomUser } from "@dogehouse/feta/types";
+import { CurrentRoom, RoomUser } from "@dogehouse/feta";
 import { Button } from "./Button";
 import { modalConfirm } from "./ConfirmModal";
 import { UserProfile } from "./UserProfile";

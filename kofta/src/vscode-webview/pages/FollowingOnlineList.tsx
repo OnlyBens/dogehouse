@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { wsend } from "@dogehouse/feta/createWebsocket";
+import { wsend } from "@dogehouse/feta";
 import { currentRoomAtom, followingOnlineAtom } from "../atoms";
 import { Avatar } from "../components/Avatar";
 import { Backbar } from "../components/Backbar";

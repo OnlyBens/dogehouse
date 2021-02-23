@@ -1,9 +1,9 @@
 import { useAtom } from "jotai";
 import React, { useEffect } from "react";
 import hark from "hark";
-import { wsend } from "@dogehouse/feta/createWebsocket";
+import { wsend } from "@dogehouse/feta";
 import { currentRoomAtom } from "../../vscode-webview/atoms";
-import { useVoiceStore } from "@dogehouse/feta/webrtc/stores/useVoiceStore";
+import { useVoiceStore } from "@dogehouse/feta";
 
 interface ActiveSpeakerListenerProps {}
 

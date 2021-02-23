@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { wsend } from "@dogehouse/feta/createWebsocket";
+import { wsend } from "@dogehouse/feta";
 import { Button } from "./Button";
 import { Input } from "./Input";
 import { Modal } from "./Modal";

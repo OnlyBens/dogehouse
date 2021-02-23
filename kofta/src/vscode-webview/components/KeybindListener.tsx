@@ -1,8 +1,8 @@
 import React, { useMemo } from "react";
 import { GlobalHotKeys } from "react-hotkeys";
-import { wsend } from "@dogehouse/feta/createWebsocket";
-import { useKeyMapStore } from "@dogehouse/feta/webrtc/stores/useKeyMapStore";
-import { useMuteStore } from "@dogehouse/feta/webrtc/stores/useMuteStore";
+import { wsend } from "@dogehouse/feta";
+import { useKeyMapStore } from "@dogehouse/feta";
+import { useMuteStore } from "@dogehouse/feta";
 
 interface KeybindListenerProps {}
 

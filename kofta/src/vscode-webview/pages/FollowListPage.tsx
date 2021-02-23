@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import React from "react";
 import { useHistory, useLocation, useRouteMatch } from "react-router-dom";
-import { wsend } from "@dogehouse/feta/createWebsocket";
+import { wsend } from "@dogehouse/feta";
 import {
   currentRoomAtom,
   followerMapAtom,
@@ -13,7 +13,7 @@ import { Backbar } from "../components/Backbar";
 import { BodyWrapper } from "../components/BodyWrapper";
 import { Button } from "../components/Button";
 import { Wrapper } from "../components/Wrapper";
-import { onFollowUpdater } from "@dogehouse/feta/utils/onFollowUpdater";
+import { onFollowUpdater } from "@dogehouse/feta";
 
 interface FollowListPageProps {}
 

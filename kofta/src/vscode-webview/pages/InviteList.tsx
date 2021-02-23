@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useAtom } from "jotai";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
-import { wsend } from "@dogehouse/feta/createWebsocket";
+import { wsend } from "@dogehouse/feta";
 import { currentRoomAtom, inviteListAtom } from "../atoms";
 import { Avatar } from "../components/Avatar";
 import { Backbar } from "../components/Backbar";

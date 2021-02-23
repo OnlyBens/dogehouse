@@ -4,7 +4,7 @@ import {
   Room,
   BaseUser,
   UserWithFollowInfo,
-} from "@dogehouse/feta/types";
+} from "@dogehouse/feta";
 
 const createSetter = <T>(a: WritableAtom<T, any>) =>
   atom(null, (get, set, fn: (x: T) => T) => {

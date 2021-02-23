@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import DogeHouse from "@dogehouse/feta/assets/dogehouse.png";
+import DogeHouse from "../../../assets/dogehouse.png";
 import { ArrowLeft } from "react-feather";
 
 interface BackbarProps {

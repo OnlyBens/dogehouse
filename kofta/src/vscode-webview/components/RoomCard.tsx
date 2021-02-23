@@ -2,7 +2,7 @@ import { useAtom } from "jotai";
 import React from "react";
 import { meAtom } from "../atoms";
 import { Codicon } from "../svgs/Codicon";
-import { CurrentRoom, Room } from "@dogehouse/feta/types";
+import { CurrentRoom, Room } from "@dogehouse/feta";
 
 interface RoomProps {
   active?: boolean;
@@ -49,7 +49,9 @@ export const RoomCard: React.FC<RoomProps> = ({
     <div>
       <button
         onClick={onClick}
-        className={`w-full ${active ? "bg-simple-gray-4d" : "bg-simple-gray-33"} hover:bg-simple-gray-69 active:bg-simple-gray-23 py-2.5 px-5 rounded-lg`}
+        className={`w-full ${
+          active ? "bg-simple-gray-4d" : "bg-simple-gray-33"
+        } hover:bg-simple-gray-69 active:bg-simple-gray-23 py-2.5 px-5 rounded-lg`}
       >
         <div className={`flex text-white`}>
           <div

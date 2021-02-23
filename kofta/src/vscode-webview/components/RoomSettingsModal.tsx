@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 import React from "react";
 import { X } from "react-feather";
-import { wsend } from "@dogehouse/feta/createWebsocket";
+import { wsend } from "@dogehouse/feta";
 import { renameRoomAndMakePublic } from "../../webrtc/utils/renameRoomAndMakePublic";
 import { currentRoomAtom } from "../atoms";
 import { Button } from "./Button";

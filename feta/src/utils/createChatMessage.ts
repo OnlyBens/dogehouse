@@ -1,7 +1,6 @@
 import { linkRegex } from "./../constants";
-import { BaseUser } from "@dogehouse/feta/types";
-// @ts-ignore
 import normalizeUrl from "normalize-url";
+import { BaseUser } from "../types";
 
 export const createChatMessage = (message: string, mentions: BaseUser[]) => {
   const tokens = ([] as unknown) as [

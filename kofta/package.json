@@ -2,6 +2,22 @@
   "name": "kofta",
   "version": "0.1.0",
   "private": true,
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "@types/emoji-mart": "^3.0.4",
+    "@types/hark": "^1.2.1",
+    "@types/react-modal": "^3.12.0",
+    "@types/react-responsive": "^8.0.2",
+    "@types/react-router-dom": "^5.1.7",
+    "autoprefixer": "^9.8.6",
+    "css-loader": "^5.0.1",
+    "json5": "^2.2.0",
+    "postcss": "^7.0.35",
+    "style-loader": "^2.0.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
+    "ts-loader": "^8.0.14",
+    "webpack-cli": "^4.4.0"
+  },
   "dependencies": {
     "@craco/craco": "^6.1.1",
     "@dogehouse/feta": "1.0.0",
@@ -32,12 +48,12 @@
     "react-toastify": "^7.0.2",
     "reconnecting-websocket": "^4.4.0",
     "superstruct": "^0.14.2",
-    "typescript": "^3.2.1npm",
+    "typescript": "^3.2.1",
     "web-vitals": "^0.2.4",
     "zustand": "^3.3.1"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "FAST_REFRESH=false craco start",
     "start-staging": "REACT_APP_IS_STAGING=true REACT_APP_API_BASE_URL=https://doge-staging.stripcode.dev craco start",
     "build": "craco build",
     "test": "craco test",
@@ -56,21 +72,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.0.3",
-    "@types/emoji-mart": "^3.0.4",
-    "@types/hark": "^1.2.1",
-    "@types/react-modal": "^3.12.0",
-    "@types/react-responsive": "^8.0.2",
-    "@types/react-router-dom": "^5.1.7",
-    "autoprefixer": "^9.8.6",
-    "css-loader": "^5.0.1",
-    "json5": "^2.2.0",
-    "postcss": "^7.0.35",
-    "style-loader": "^2.0.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
-    "ts-loader": "^8.0.14",
-    "webpack-cli": "^4.4.0"
   }
 }

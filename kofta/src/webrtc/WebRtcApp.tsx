@@ -2,17 +2,17 @@ import { useAtom } from "jotai";
 import React, { useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { setCurrentRoomAtom } from "../vscode-webview/atoms";
-import { useMicIdStore } from "@dogehouse/feta/shared-stores";
+import { useMicIdStore } from "@dogehouse/feta";
 import { ActiveSpeakerListener } from "./components/ActiveSpeakerListener";
 import { AudioRender } from "./components/AudioRender";
-import { useMuteStore } from "@dogehouse/feta/webrtc/stores/useMuteStore";
-import { useVoiceStore } from "@dogehouse/feta/webrtc/stores/useVoiceStore";
-import { useWsHandlerStore } from "@dogehouse/feta/webrtc/stores/useWsHandlerStore";
-import { consumeAudio } from "@dogehouse/feta/webrtc/utils/consumeAudio";
-import { createTransport } from "@dogehouse/feta/webrtc/utils/createTransport";
-import { joinRoom } from "@dogehouse/feta/webrtc/utils/joinRoom";
-import { receiveVoice } from "@dogehouse/feta/webrtc/utils/receiveVoice";
-import { sendVoice } from "@dogehouse/feta/webrtc/utils/sendVoice";
+import { useMuteStore } from "@dogehouse/feta";
+import { useVoiceStore } from "@dogehouse/feta";
+import { useWsHandlerStore } from "@dogehouse/feta";
+import { consumeAudio } from "@dogehouse/feta";
+import { createTransport } from "@dogehouse/feta";
+import { joinRoom } from "@dogehouse/feta";
+import { receiveVoice } from "@dogehouse/feta";
+import { sendVoice } from "@dogehouse/feta";
 
 interface App2Props {}
 

@@ -1,6 +1,6 @@
 import { useAtom } from "jotai";
 import React, { useLayoutEffect } from "react";
-import { wsend } from "@dogehouse/feta/createWebsocket";
+import { wsend } from "@dogehouse/feta";
 import { currentRoomAtom, meAtom, myCurrentRoomInfoAtom } from "../../atoms";
 import { ProfileModal } from "../../components/ProfileModal";
 

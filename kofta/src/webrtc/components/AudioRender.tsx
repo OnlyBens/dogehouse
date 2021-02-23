@@ -2,7 +2,7 @@ import { useAtom } from "jotai";
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "../../vscode-webview/components/Button";
 import { volumeAtom } from "../../vscode-webview/shared-atoms";
-import { useConsumerStore } from "@dogehouse/feta/webrtc/stores/useConsumerStore";
+import { useConsumerStore } from "@dogehouse/feta";
 
 interface AudioRenderProps {}
 

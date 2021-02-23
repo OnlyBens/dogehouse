@@ -2,10 +2,10 @@ import { useAtom } from "jotai";
 import queryString from "query-string";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { QueryClientProvider } from "react-query";
-import { createWebSocket, wsend } from "@dogehouse/feta/createWebsocket";
-import { useSocketStatus } from "@dogehouse/feta/webrtc/stores/useSocketStatus";
-import { useVoiceStore } from "@dogehouse/feta/webrtc/stores/useVoiceStore";
-import { useWsHandlerStore } from "@dogehouse/feta/webrtc/stores/useWsHandlerStore";
+import { createWebSocket, wsend } from "@dogehouse/feta";
+import { useSocketStatus } from "@dogehouse/feta";
+import { useVoiceStore } from "@dogehouse/feta";
+import { useWsHandlerStore } from "@dogehouse/feta";
 import { setCurrentRoomAtom, setMeAtom } from "./atoms";
 import { Button } from "./components/Button";
 import { CenterLayout } from "./components/CenterLayout";
@@ -15,8 +15,8 @@ import { Wrapper } from "./components/Wrapper";
 import { Login } from "./pages/Login";
 import { queryClient } from "./queryClient";
 import { Router } from "./Router";
-import { roomToCurrentRoom } from "@dogehouse/feta/utils/roomToCurrentRoom";
-import { useTokenStore } from "@dogehouse/feta/utils/useTokenStore";
+import { roomToCurrentRoom } from "@dogehouse/feta";
+import { useTokenStore } from "@dogehouse/feta";
 import { NotificationAudioRender } from "./modules/room-chat/NotificationAudioRender";
 
 interface AppProps {}
