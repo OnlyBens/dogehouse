@@ -18,6 +18,7 @@ module.exports = {
           "3c": "#3c3c3c",
           "3d": "#3d3d3d",
           "45": "#45494e", // meh
+          "4d": "#4d4d4d",
           "59": "#595959",
           "69": "#696969",
           "80": "#808080",
@@ -31,7 +32,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['active'],
+    },
   },
   plugins: [],
 };
